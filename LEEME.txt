@@ -1,0 +1,38 @@
+CUESTIONARIO PROFESORADO BILINGUE Y PLURILINGUE - CEP CORDOBA
+
+1. GOOGLE APPS SCRIPT (OBLIGATORIO)
+   El Apps Script anterior no detectaba los encabezados 'ID respuesta' y 'Fecha y hora'.
+   Sustituye el contenido de Codigo.gs por Code.gs de esta carpeta.
+   Guarda y ve a Implementar > Gestionar implementaciones > Editar (lapiz)
+   > Version: Nueva version > Implementar. Conserva la misma URL /exec.
+
+2. GITHUB
+   Crea un repositorio NUEVO para no sobrescribir la aplicacion anterior.
+   Sube index.html, logo-cep.png, package.json, vercel.json y la carpeta api/.
+   No es necesario subir Code.gs ni headers.json ni build.py.
+
+3. VERCEL
+   Importa el nuevo repositorio como proyecto nuevo.
+   Framework preset: Other. Root Directory: ./
+   En Settings > Environment Variables agrega:
+     GOOGLE_SCRIPT_URL = (tu URL de Apps Script que termina en /exec)
+   Despliega o vuelve a desplegar para aplicar la variable.
+
+4. PRUEBA
+   Abre la URL publica de Vercel, rellena el formulario y envia.
+   Comprueba que aparece una fila nueva en RESPUESTAS y que
+   las columnas 'ID respuesta' y 'Fecha y hora' se completan.
+
+NOTAS
+- 36 preguntas; 18 indicadores de escala 1-5 (P08-P25).
+- P28 exige 5 prioridades y P30 exige 3 formatos; P29 depende de P28.
+- P26 maximo 5; P33 maximo 4.
+- P01-P07 obligatorias como en el PDF. Las demas respetan la falta
+  de asterisco del formulario original, salvo las reglas de cantidad.
+- P27 se exige si se marca Otra en P26.
+- La aplicacion guarda borradores en el navegador hasta el envio.
+- Los nombres de columnas se han tomado de la plantilla Excel proporcionada.
+- El formulario recoge datos personales: restringe el acceso a la hoja
+  y completa la informacion de proteccion de datos institucional antes de publicar.
+
+VERSION VISUAL: identidad corporativa y plurilingue, ilustracion SVG propia, saludos en cuatro lenguas, iconos de secciones y mejoras responsive. No cambia la conexion ni los nombres de columnas.
